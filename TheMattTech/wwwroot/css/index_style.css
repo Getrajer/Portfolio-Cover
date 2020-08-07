@@ -12,6 +12,8 @@ p {
 
 h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
+    padding:0;
+    margin:0;
 }
 
 body{
@@ -207,7 +209,7 @@ header .right_f{
     }
 
     header .right{
-        padding: 2em 0 2em 0;
+        padding: 4em 0 2em 0;
     }
 
     header .right .see_more_btn{
@@ -317,6 +319,23 @@ header .right_f{
     font-size: 1.2rem;
 }
 
+@media screen and (max-width: 900px){
+    .about_1 .skills_box {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .about_1 .about_1_container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .about_1 .skill{
+        border:unset;
+    }
+
+}
+
 /*End of About 1 Section*/
 
 
@@ -354,6 +373,10 @@ header .right_f{
     justify-content:center;
     align-content:center;
     align-items:center;
+}
+
+.development_process_time_line h2{
+    margin-bottom: 0.5em;
 }
 
 .development_process_time_line .icon{
@@ -411,6 +434,43 @@ header .right_f{
 .development_process_time_line .left .content{
     padding: 1em;
     border: 1px solid rgb(42, 48, 96);
+}
+
+
+@media screen and (max-width: 900px){
+    .development_process_time_line {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .development_process_time_line .middle{
+        display:none;
+    }
+
+    .development_process_time_line .right{
+        padding:0;
+    }
+
+    .development_process_time_line .left{
+        display:grid;
+        padding:0;
+        grid-template-columns: 20% 80%;
+        grid-template-areas:
+            "t c";
+
+    }
+
+    .development_process_time_line .left .content{
+        grid-area: c;
+    }
+
+    .development_process_time_line .left .time_stamp{
+        grid-area: t;
+        border-radius: unset;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
 }
 
 /*End of development process*/
@@ -534,6 +594,20 @@ header .right_f{
     line-height: 35px;
 }
 
+@media screen and (max-width: 600px){
+    .profile .profile_container {
+        display: flex;
+        align-items: center;
+        justify-content:normal;
+    }
+
+    .profile .profile_content{
+        padding:0;
+        margin:0;
+        margin-left:1em;
+    }
+}
+
 /*End of profile Section*/
 
 /*Hobbies section*/
@@ -560,20 +634,35 @@ header .right_f{
 }
 
 .hobbies .hobby_box{
-    display:flex;
-    justify-content:space-around;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 3em 0;
 }
 
 .hobbies .hobby{
     text-align:center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 5px;
 }
 
 .hobbies .hobby i{
-    font-size:4rem;
+    font-size:2.5rem;
 }
+
+
+@media screen and (max-width: 600px){
+    .hobbies .hobby_box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 3em 0;
+    }
+
+    .title h1{
+        font-size:2.8rem!important;
+    }
+}
+
 
 /*End of hobbies section*/
 
@@ -587,10 +676,13 @@ footer{
 
     padding: 1em 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    letter-spacing: 5px;
-    font-weight:600;
+    letter-spacing: 7px;
 }
 
-
+@media screen and (max-width: 400px){
+    footer {
+        letter-spacing: 1px;
+    }
+}
 
 /*End of footer section*/

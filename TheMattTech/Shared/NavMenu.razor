@@ -1,28 +1,71 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">TheMattTech</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+﻿<div class="top_row">
+    <div class="top_container">
+        <div class="logo">
+            <a class="navbar-brand" href="">TheMattTech</a>
+        </div>
+        <div class="toggle_button">
+            @if (collapseNavMenu == true)
+            {
+                <button class="navbar-toggler" @onclick="ToggleNavMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            }
+            else
+            {
+                <button class="navbar-toggler" @onclick="ToggleNavMenu">
+                    X
+                </button>
+            }
+
+        </div>
+    </div>
+
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-    </ul>
+
+
+
+    <div class="nav">
+        <div class="placeholder">
+        </div>
+
+        <ul class="nav_links">
+            <li>
+                <h1>TheMattech</h1>
+            </li>
+            <li class="nav_item">
+                <NavLink class="nav_link" href="" Match="NavLinkMatch.All">
+                    <i class="fas fa-home"></i> Home
+                </NavLink>
+            </li>
+            <li class="nav_item">
+                <NavLink class="nav_link" href="counter">
+                    <i class="fab fa-connectdevelop"></i> Projects
+                </NavLink>
+            </li>
+            <li class="nav_item">
+                <NavLink class="nav_link" href="fetchdata">
+                    <i class="fas fa-envelope-open-text"></i> Contact
+                </NavLink>
+            </li>
+            <li class="media">
+                <div class="medium">
+                    <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="medium">
+                    <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="medium">
+                    <a target="_blank" href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="medium">
+                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
 </div>
 
 @code {
