@@ -1,0 +1,596 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab', serif;
+}
+
+/*Header section*/
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1rem;
+    font-weight:normal;
+    line-height:1.5;
+    color:#333;
+    overflow-x:hidden;
+}
+
+.v_header{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.container{
+    max-width:1400px;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:auto;
+}
+
+.fullscreen_video_wrap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.fullscreen_video_wrap video{
+    min-height:100%;
+    min-width:100%;
+}
+
+.header_overlay{
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:1;
+    background:rgba(0, 0, 0, 0.70);
+}
+
+.header_content{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+    min-height: 600px;
+    flex-direction:column;
+    z-index: 3;
+    width:100%;
+}
+
+.header_content .header_content_container{
+    width:100%;
+    max-width: 1400px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header_content .title {
+    color: white;
+}
+
+.header_content .title h1{
+    font-size: 8.5rem;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+.header_content .title h2{
+    font-size: 3.5rem;
+    padding-left: 6px;
+}
+
+header .underline_container {
+    width: 100%;
+    padding-right: 85%;
+    padding-left: 9px;
+}
+
+header .underline_container .underline{
+    height: 6px;
+    width:100%;
+    background-color: rgb(42, 48, 96);
+    margin: 0.5em 0;
+}
+
+header .right{
+    display:flex;   
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+}
+
+header .right .see_more_btn{
+    background-color:rgba(255, 255, 255, 0.80);
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+
+    display:flex;   
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+
+    color:black;
+    font-size:6rem;
+    font-weight:800;
+
+    transition: 0.5s;
+
+    transform:translateY(0px);
+
+    cursor:pointer;
+
+    animation-name: btn_animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+header .right .see_more_btn:hover{
+    background-color:rgba(42, 48, 96, 0.80);
+    color:white;
+
+    width:220px;
+    height:220px;
+}
+
+header .header_footer{
+    width:100%;
+    max-width:1400px;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    z-index: 3;
+}
+
+header .header_footer_container {
+    width: 80%;
+    border-top: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 0.5em 2em;
+    text-align: center;
+}
+
+header .left_f{
+    font-weight:200;
+    color:rgba(255, 255, 255, 0.60);
+    font-size:0.9rem;
+}
+
+header .right_f{
+    font-weight:600;
+}
+
+
+
+@keyframes btn_animation {
+    0%{
+        transform:translateY(0px);
+    }
+
+    25%{
+        transform: translateY(-20px);
+    }
+
+    50%{
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .header_content .header_content_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    header .right{
+        padding: 2em 0 2em 0;
+    }
+
+    header .right .see_more_btn{
+        height:150px;
+        width:150px;
+    }
+
+    header .right .see_more_btn:hover{
+        width:160px;
+        height:160px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .header_content .title h1 {
+        font-size: 6.5rem;
+        font-weight: 800;
+        letter-spacing: 10px;
+    }
+
+    .header_content .title h2 {
+        font-size: 2.5rem;
+        padding-left: 6px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header_content .title h1 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
+
+    .header_content .title h2 {
+        font-size: 1.5rem;
+        padding-left: 3px;
+    }
+
+    header .right .see_more_btn {
+        height: 100px;
+        width: 100px;
+        font-size:3rem;
+    }
+
+    header .right .see_more_btn:hover {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/*End of Header Section*/
+
+/*About 1 Section*/
+.about_1{
+    min-height: 50vh;
+    padding: 11% 0;
+
+    display:flex;
+    justify-content:center;
+}
+
+.about_1 .about_1_container{
+    width:100%;
+    max-width: 1000px;
+}
+
+.about_1 .title{
+    text-align:center;
+    padding: 4em 0;
+}
+
+.about_1 .title h1{
+    font-size: 4.5rem;
+}
+
+.about_1 .text_box{
+    padding: 1em 1em;
+    font-size: 2rem;
+    text-align:center;
+}
+
+.about_1 .skills_box{
+    padding: 10em 0 1em;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.about_1 .skill{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding:1em 1.5em;
+    text-align:center;
+}
+
+.about_1 .other{
+    border-right: unset!important;
+}
+
+.about_1 .skill h2{
+    text-align:center;
+    padding:1em 0;
+    font-size:3.3rem;
+}
+
+.about_1 .skill p{
+    font-size: 1.2rem;
+}
+
+/*End of About 1 Section*/
+
+
+/*Development Process*/
+
+.development_process{
+    display:flex;
+    justify-content:center;
+    padding: 3em 0;
+}
+
+.development_process .development_process_container{
+    width:100%;
+    max-width:1100px;
+}
+
+.development_process .title{
+    text-align:center;
+    padding: 4em 0;
+}
+
+.development_process .title h1{
+    font-size: 4.5rem;
+}
+
+.development_process_time_line{
+    width:100%;
+
+    display:grid;
+    grid-template-columns: 45% 10% 45%;
+}
+
+.development_process_time_line .middle{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+}
+
+.development_process_time_line .icon{
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    background-color: rgb(42, 48, 96);
+    color:white;
+    font-size:3rem;
+
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+}
+
+.development_process_time_line .left{
+    display:grid;
+    grid-template-columns: 80% 20%;
+    padding: 3em 2em;
+}
+
+.development_process_time_line .right{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    padding: 0 1em;
+}
+
+.development_process_time_line .time_stamp{  
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    align-items:center;
+}
+
+.development_process_time_line .right .time_stamp{
+    color:white;
+    background-color:rgb(42, 48, 96);
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+.development_process_time_line .left .time_stamp{
+    color:white;
+    background-color:rgb(42, 48, 96);
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.development_process_time_line .right .content{
+    padding: 1em;
+    border: 1px solid rgb(42, 48, 96);
+}
+
+.development_process_time_line .left .content{
+    padding: 1em;
+    border: 1px solid rgb(42, 48, 96);
+}
+
+/*End of development process*/
+
+
+/*Projects button*/
+.projects_btn {
+    min-height: 50vh;
+    padding: 11% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.projects_btn .title{
+    text-align:center;
+    padding: 2em 0;
+}
+
+.projects_btn .title h1{
+    font-size: 4.5rem;
+}
+
+.projects_btn .button_container{
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items:center;
+}
+
+.projects_btn .p_button{
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items:center;
+    font-weight:800;
+    letter-spacing: 5px;
+
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:  17px 17px 13px #d1d1d1, 
+             -17px -17px 13px #f1f1f1;
+
+    cursor:pointer;
+    transition: 0.5s transform;
+}
+
+.projects_btn a{
+    color:black;
+}
+
+.projects_btn .p_button h1{
+    font-size: 5rem;
+    transition: 0.5s;
+}
+
+.projects_btn .p_button:hover{
+    transform: translateY(-5px);
+}
+
+.projects_btn .p_button:hover h1{
+    color: rgb(42, 48, 96);
+}
+
+/*End of projects button*/
+
+/*Profile Section*/
+.profile {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #161a39;
+}
+
+.profile .bacground_color {
+    height: 640px;
+    position: absolute;
+    width: 100%;
+    background-color: #161a39;
+}
+
+.profile .profile_container {
+    min-height: 856px;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    background-image: url(../images/About_Background.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    z-index:1;
+}
+
+.profile .profile_content {
+    width:100%;
+    color:white;
+    max-width:500px;
+    height:400px;
+    padding-top:1em;
+    margin-left: 5em;
+}
+
+.profile .title{
+    padding: 1em 0 3em 0;
+}
+
+.profile .title h1 {
+    font-size: 3.5rem;
+}
+
+.profile .head_txt{
+    padding: 1em 0;
+}
+
+.profile .head_txt p{
+    font-size:1.2rem;
+    line-height: 35px;
+}
+
+/*End of profile Section*/
+
+/*Hobbies section*/
+.hobbies {
+    display: flex;
+    justify-content: center;
+    background-color: #161a39;
+    padding-bottom: 5em;
+}
+
+.hobbies .hobbies_container{
+    width: 100%;
+    max-width: 1100px;
+    color:white;
+}
+
+.hobbies .title{
+    padding: 0em 0 2em 0;
+    text-align:center;
+}
+
+.hobbies .title h1{
+    font-size: 3.5rem;
+}
+
+.hobbies .hobby_box{
+    display:flex;
+    justify-content:space-around;
+    padding: 3em 0;
+}
+
+.hobbies .hobby{
+    text-align:center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.hobbies .hobby i{
+    font-size:4rem;
+}
+
+/*End of hobbies section*/
+
+
+/*Footer section*/
+footer{
+    display:flex;
+    justify-content:center;
+    color:white;
+    background-color:#161a39;
+
+    padding: 1em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 5px;
+    font-weight:600;
+}
+
+
+
+/*End of footer section*/
