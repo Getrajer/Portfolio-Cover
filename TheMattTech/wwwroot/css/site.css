@@ -50,6 +50,15 @@ app {
     color:white;
 }
 
+.top_row .logo svg{
+    fill:white;
+    transition: 0.5s;
+}
+
+.top_row .logo svg:hover{
+    fill: rgba(42, 48, 96, 1);
+}
+
 .top_row .toggle_button{
     display:flex;
     align-items:center;
@@ -60,6 +69,11 @@ app {
 .top_row .toggle_button button{
     float:right;
     font-size:2.5rem;
+    transition: color 0.5s;
+}
+
+.top_row .toggle_button button:hover{
+    color: rgba(42, 48, 96, 1);
 }
 
 .top_row .toggle_button button:focus{
@@ -126,7 +140,7 @@ app {
 }
 
 .nav .media .medium a{
-    color:rgba(255, 255, 255, 0.6);
+    color:rgba(255, 255, 255, 0.4);
     transition: 0.5s;
 }
 
@@ -134,4 +148,26 @@ app {
     color: rgba(255, 255, 255, 1);
 }
 
+@media screen and (max-width: 500px){
+    .nav h1 {
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+    }
 
+    .nav {
+        grid-template-columns: 1fr;
+    }
+
+    .placeholder{
+        display:none;
+    }
+
+    .nav .media .medium {
+        font-size: 2rem;
+        text-align:center;
+    }
+
+    .nav_links{
+        padding-left:30px;
+    }
+}

@@ -300,13 +300,13 @@ header .right_f{
 }
 
 .about_1 .skill{
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
     padding:1em 1.5em;
     text-align:center;
 }
 
-.about_1 .other{
-    border-right: unset!important;
+.about_1 .backend{
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .about_1 .skill h2{
@@ -402,7 +402,7 @@ header .right_f{
 .development_process_time_line .right{
     display:grid;
     grid-template-columns: 20% 80%;
-    padding: 0 1em;
+    padding: 1.5em 2em;
 }
 
 .development_process_time_line .time_stamp{  
